@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0.5079365079361366 0.3809523809520954 227.31000000000003 158" width="219.31" height="150">
+	<defs>
+		<path d="M127.21 37.53C144.11 37.53 157.82 52.2 157.82 70.3C157.82 70.98 157.8 71.66 157.76 72.33C169.97 75.08 178.94 84.3 178.94 95.25C178.94 95.25 178.94 95.25 178.94 95.25C178.94 108.37 166.05 119 150.15 119C142.93 119 85.15 119 77.93 119C62.03 119 49.14 108.37 49.14 95.25C49.14 95.25 49.14 95.25 49.14 95.25C49.14 83.81 58.93 74.26 71.98 72C73.15 59.6 82.93 49.92 94.82 49.92C97.44 49.92 99.94 50.39 102.29 51.25C107.84 42.94 116.93 37.53 127.21 37.53Z" id="am9RB5YLw">
+		</path>
+		<path d="M223.82 154.38C223.82 89.36 223.82 48.72 223.82 32.46C223.82 16.95 211.25 4.38 195.74 4.38C170.24 4.38 106.5 4.38 4.51 4.38C4.51 69.12 4.51 109.58 4.51 125.76C4.51 139.31 15.49 150.3 29.04 150.3C52.36 150.3 110.65 150.3 203.91 150.3" id="f1EJ4s04po">
+		</path>
+	</defs>
+	<g>
+		<g>
+			<g>
+				<use xlink:href="#am9RB5YLw" opacity="1" fill-opacity="0" stroke="#09BC8A" stroke-width="8" stroke-opacity="1">
+				</use>
+			</g>
+		</g>
+		<g>
+			<g>
+				<use xlink:href="#f1EJ4s04po" opacity="1" fill-opacity="0" stroke="#003B46" stroke-width="8" stroke-opacity="1">
+				</use>
+			</g>
+		</g>
+	</g>
+</svg>

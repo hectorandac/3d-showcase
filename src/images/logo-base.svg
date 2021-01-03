@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 135.63 57.91">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        opacity: 0.8;
+        mix-blend-mode: screen;
+      }
+
+      .cls-3 {
+        fill: #07575B;
+      }
+    </style>
+  </defs>
+  <title>Asset 1</title>
+  <g class="cls-1">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <g id="a2SG4pBfNp">
+          <image class="cls-2" width="35" height="35" transform="translate(50.03 22.91)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAACXBIWXMAAAsSAAALEgHS3X78AAACzElEQVRYR82YW3LaQBBFjwADDo6dnWUb+cpi8pVtZGVx/ACMBcrHTKM7rdYDquJKV3WNEIPm+PZjRq6apuF/sdnYhI+0xdiEIfv+81fl7/349vVqqatLwhQtDvh7xQMvgZsEIxC6cHStD2t0nAI1CuNAvEMJBWlx73Z/EGoQJoN4n2X3UGYNcJLRrs9gfUC9MA5k5nxOFwpKgKMbFTIECqupB2Se59u4oASCEqTOXtEC2ZxpykiO2CK6+I1zg1OYGngPvKZUqfHq9PUZVcVgltlX4gY0Iy1wJC18AN6yawh9UhdWKONUmdEqsgTWwK34mhbIYGoSyB7Yie9JYKpQR51IGZ8rBrMiQWyyf8qfl7Qw76RFtyRFoc0hC5FWWGFTwmS5siKpsQE+A3ckoBVp4RMJZkcXpKZMaPMCKNooNVRzypy5JQHcAffAg/iXPN6TYDeUobRk1+qrdIs5K+P2nSiBbyhzZ0OCWuc5DW3CHvN1H0iojA9TJaO6L2+rpnX2BSkkFSkUVnlDIB2bcoTQB0Sd2Lxyn6NtoxcE4pyJzPcI3/Ij9z1lsMdAV5mGNpbRwtpdD9ln+b7ljN3XnqKdF3qAzsoEG5eBKIQ2tC3wkv1Vxi1xo1PVQotypk8RA1nm32nVWDUdSCAvJKgIyIf8bH0JbBNNYuusujGeSItrB65JAKbaju42oECMbQdQKmOqaHVYt90zvDeZOge6ynSsqKZM6ZPXh8ny4wl4BH6LPwJ/8ncWqkFl1MbCZDB639R6I6liYdPvtOLsejBEEPQZmaAwek6xELwCzyQVnvL1M2VFWamrKlrihQ11YPuBlaImdU23xaua9kfoWEBEZ+CxAznE20FFCaJmi0Yj0D1umk15VYF2wWifURgNceTXvzeZ9UDp6O28uIyjb5WTYMyCM0+fFQ8dgzC7CEat558AZ5sKoHY1zL+wqeeZD7G/KW3AXS0GB6YAAAAASUVORK5CYII="/>
+          <circle class="cls-3" cx="67.73" cy="40.52" r="4.8"/>
+        </g>
+        <path class="cls-3" d="M25.78,0,9.18,0A9.26,9.26,0,0,0,0,9.36l.07,30.2a9.35,9.35,0,0,0,9.32,9.28h1.3A24.47,24.47,0,0,0,35.13,24.28l0-15A9.28,9.28,0,0,0,25.78,0Z"/>
+        <path class="cls-3" d="M56.73,0h-8.1a9.35,9.35,0,0,0-9.3,9.3v18.1a9.35,9.35,0,0,0,9.3,9.3A17.41,17.41,0,0,0,66,19.32v-10A9.28,9.28,0,0,0,56.73,0Z"/>
+        <path class="cls-3" d="M87.63,0h-8.1a9.35,9.35,0,0,0-9.3,9.3v10a17.41,17.41,0,0,0,17.4,17.4,9.35,9.35,0,0,0,9.3-9.3V9.32A9.35,9.35,0,0,0,87.63,0Z"/>
+        <path class="cls-3" d="M126.33,0h-16.6a9.35,9.35,0,0,0-9.3,9.3v15a24.54,24.54,0,0,0,24.5,24.5h1.4a9.35,9.35,0,0,0,9.3-9.3V9.32A9.35,9.35,0,0,0,126.33,0Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
