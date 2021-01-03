@@ -27,7 +27,7 @@ height: 680px;
 `
 
 const BlobContainer = styled.svg`
-height: 90vh;
+height: 700px;
 position: absolute;
 top: 0;
 left: 0;
@@ -83,7 +83,7 @@ export default function Greetings() {
             </AccentButton>
         </TextContainer>
         <ResponsiveSceneBuilder />
-        <BlobContainer width="auto" height="90vh" viewBox="170 25 200 240" xmlns="http://www.w3.org/2000/svg">
+        <BlobContainer width="auto" height="928px" viewBox="170 25 200 240" xmlns="http://www.w3.org/2000/svg">
             <path fill={soft} xmlns="http://www.w3.org/2000/svg" d="M216.04 205.83C248.26 198.24 259.17 157.9 235.17 135.1C201.75 103.34 139.18 43.89 101.23 7.82C85.96 -6.68 60.76 -0.1 54.54 20.02C39.62 68.32 15.18 147.38 1.96 190.15C-7.8 221.72 20.43 251.94 52.59 244.36C100.27 233.12 168.81 216.96 216.04 205.83Z" id="e1xV2YZdWS" />
         </BlobContainer>
 

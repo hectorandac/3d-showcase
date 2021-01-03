@@ -113,7 +113,7 @@ class Scener {
 export default function SceneBuilder(props) {
     const canvasHolder = React.useRef(null)
     const [scener, setScener] = useState(null);
-    const [texture, setTexture] = useState('http://0.0.0.0:8000/living.jpeg')
+    const [texture, setTexture] = useState('http://192.168.4.42:8000/living.jpeg')
 
     useEffect(() => {
         setScener(new Scener(canvasHolder.current));
@@ -139,7 +139,7 @@ export default function SceneBuilder(props) {
         geometry2.scale(- 1, 1, 1);
 
         var material2 = new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('http://0.0.0.0:8000/dining.jpg')
+            map: new THREE.TextureLoader().load('http://192.168.4.42:8000/dining.jpg')
         });
 
         mesh2 = new THREE.Mesh(geometry2, material2);

@@ -11,12 +11,34 @@ import Image1 from '../../../images/landing/360_1.jpeg'
 import Image2 from '../../../images/landing/360_2.jpeg'
 import Image3 from '../../../images/landing/360_3.jpeg'
 
+import { main, soft } from '../../colors';
+
+const TitleSection = styled.h1`
+color: ${main};
+position: relative;
+font-weight: 400;
+:after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 260px;
+    width: 50%;
+    height: 0.5em;
+    border-top: 2px solid ${soft};
+    z-index: -1;
+}
+`
+
 const Container = styled.div`
-display: flex;
-flex-direction: row;
 max-width: 1200px;
 margin: 0 auto;
 width: 90%;
+margin-top: 32px;
+`
+
+const ItemsContainer = styled.div`
+display: flex;
+flex-direction: row;
 justify-content: center;
 justify-items: center;
 align-content: center;
@@ -126,14 +148,18 @@ export default function Steps() {
         }
     }
 
+    /*
     setTimeout(() => {
         if (userInteracted === false) {
             let result = currentItem == 3 ? 0 : currentItem + 1;
             setCurrentItem(result);
         }
     }, 16000)
+    */
 
     return <Container>
+        <TitleSection>How to start</TitleSection>
+    <ItemsContainer>
         <SubSections>
             <Image onClick={() => { setCurrentItem(0); setUserInteracted(true) }} pose={resolveState(currentItem, 0)} currentItem={currentItem} item={resolvePosition(currentItem, 0, true)} src={Camera} />
             <Image onClick={() => { setCurrentItem(1); setUserInteracted(true) }} pose={resolveState(currentItem, 1)} currentItem={currentItem} item={resolvePosition(currentItem, 1, true)} src={Upload} />
@@ -196,5 +222,6 @@ export default function Steps() {
                 </p>
             </TextAnimator>
         </Text>
+    </ItemsContainer>
     </Container>
 }

@@ -10,7 +10,7 @@ font-weight: 400;
     content:"";
     position: absolute;
     bottom: 0;
-    left: 170px;
+    left: 200px;
     width: 50%;
     height: 0.5em;
     border-top: 2px solid ${soft};
@@ -25,8 +25,8 @@ max-width: 1200px;
 margin-top: 32px;
 `
 
-export default function Product() {
+export default function Solutions() {
     return <Container>
-        <Title>Product</Title>
+        <Title>Solutions</Title>
     </Container>
 }

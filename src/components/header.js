@@ -86,11 +86,11 @@ const Header = () => {
       <ItemsContainer>
         <Logo src={LogoBase} />
         <Menu>
-          <MenuAccentButton>Get Started</MenuAccentButton>
           <OnlyDesktop><MenuItem>Product</MenuItem></OnlyDesktop>
           <OnlyDesktop><MenuItem>Solutions</MenuItem></OnlyDesktop>
           <OnlyDesktop><MenuItem>Princing</MenuItem></OnlyDesktop>
           <OnlyDesktop><MenuItem>Sign In</MenuItem></OnlyDesktop>
+          <MenuAccentButton>Get Started</MenuAccentButton>
         </Menu>
       </ItemsContainer>
     </HeaderContainer>

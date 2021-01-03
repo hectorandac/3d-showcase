@@ -7,6 +7,8 @@ import styled from 'styled-components'
 import Greetings from '../components/index/sections/greetings'
 import Steps from '../components/index/sections/steps'
 import Product from '../components/index/sections/product'
+import Pricing from '../components/index/sections/pricing'
+import Solutions from '../components/index/sections/solutions'
 
 
 function Box(props) {
@@ -41,6 +43,8 @@ const IndexPage = () => {
     <Layout>
       <Greetings/>
       <Product />
+      <Solutions />
+      <Pricing />
       <Steps />
     </Layout>
   )
