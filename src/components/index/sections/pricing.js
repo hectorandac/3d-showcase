@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { accent_soft, dark, main, soft, soft_85 } from '../../colors';
+import { dark, main, soft, soft_85 } from '../../colors';
 import { HiTrendingUp, HiOutlineSupport } from 'react-icons/hi'
 import { GrDomain } from 'react-icons/gr'
 import { MdPanorama } from 'react-icons/md'
@@ -73,7 +73,7 @@ font-weight: 400;
     position: absolute;
     bottom: 0;
     left: 150px;
-    width: 50%;
+    width: 30%;
     height: 0.5em;
     border-top: 2px solid ${soft};
     z-index: -1;

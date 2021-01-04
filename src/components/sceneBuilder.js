@@ -1,4 +1,3 @@
-import { TweenLite } from "gsap/gsap-core";
 import React, { useEffect, useState } from "react";
 import * as THREE from "three";
 
@@ -43,19 +42,37 @@ class Scener {
         this.theta = 0;
         this.lon = 0;
 
+        let currentPinchDif = 0;
+
         this.holderReference.addEventListener('mousedown', onDocumentMouseDown, false);
         this.holderReference.addEventListener('mousemove', onDocumentMouseMove, false);
         this.holderReference.addEventListener('mouseup', onDocumentMouseUp, false);
+        this.holderReference.addEventListener('touchstart', onDocumentTouchDown, false);
+        this.holderReference.addEventListener('touchmove', onDocumentTouchMove, false);
+        this.holderReference.addEventListener('touchend', onDocumentMouseUp, false);
+        this.holderReference.addEventListener('touchcancel', onDocumentMouseUp, false);
         this.holderReference.addEventListener('wheel', onDocumentMouseWheel, false);
         window.addEventListener('resize', onWindowResize, false);
 
         function onWindowResize() {
-            console.log("Chnaged size")
             let width = instace.holderReference.offsetWidth
             let height = instace.holderReference.offsetHeight
             instace.camera.aspect = width / height;
             instace.camera.updateProjectionMatrix();
             instace.renderer.setSize(width, height);
+        }
+
+        function onDocumentTouchDown(event) {
+            event.preventDefault();
+            isUserInteracting = true;
+            if (event.touches.length === 2) {
+                currentPinchDif = Math.abs(event.touches[0].clientX - event.touches[1].clientX)
+            } else {
+                onMouseDownMouseX = event.touches[0].clientX;
+                onMouseDownMouseY = event.touches[0].clientY;
+                onMouseDownLon = instace.lon;
+                onMouseDownLat = instace.lat;
+            }
         }
 
         function onDocumentMouseDown(event) {
@@ -67,11 +84,29 @@ class Scener {
             onMouseDownLat = instace.lat;
         }
 
+
+        function onDocumentTouchMove(event) {
+            if (isUserInteracting === true) {
+                if (event.touches.length === 2) {
+                    let tmpPinchDif = Math.abs(event.touches[0].clientX - event.touches[1].clientX)
+                    let targetFov = instace.camera.fov + (currentPinchDif - tmpPinchDif) * (0.005 * instace.camera.fov)
+                    if (targetFov > 5 && targetFov < 80) {
+                        instace.camera.fov = targetFov;
+                        instace.camera.updateProjectionMatrix();
+                    }
+                    currentPinchDif = tmpPinchDif;
+                } else {
+                    instace.lon = (onMouseDownMouseX - event.touches[0].clientX) * (0.005 * instace.camera.fov) + onMouseDownLon;
+                    instace.lat = (event.touches[0].clientY - onMouseDownMouseY) * (0.005 * instace.camera.fov) + onMouseDownLat;
+                }
+            }
+        }
+
         function onDocumentMouseMove(event) {
 
             if (isUserInteracting === true) {
-                instace.lon = (onMouseDownMouseX - event.clientX) * 0.1 + onMouseDownLon;
-                instace.lat = (event.clientY - onMouseDownMouseY) * 0.1 + onMouseDownLat;
+                instace.lon = (onMouseDownMouseX - event.clientX) * (0.005 * instace.camera.fov) + onMouseDownLon;
+                instace.lat = (event.clientY - onMouseDownMouseY) * (0.005 * instace.camera.fov) + onMouseDownLat;
             }
         }
 
@@ -81,7 +116,7 @@ class Scener {
 
         function onDocumentMouseWheel(event) {
             event.preventDefault();
-            let targetFov = instace.camera.fov + event.deltaY * 0.05
+            let targetFov = instace.camera.fov + event.deltaY * (0.005 * instace.camera.fov)
             if (targetFov > 5 && targetFov < 80) {
                 instace.camera.fov = targetFov;
                 instace.camera.updateProjectionMatrix();
@@ -106,14 +141,12 @@ class Scener {
         }
 
         animate();
-        console.log(instace)
     }
 }
 
 export default function SceneBuilder(props) {
     const canvasHolder = React.useRef(null)
     const [scener, setScener] = useState(null);
-    const [texture, setTexture] = useState('http://192.168.4.42:8000/living.jpeg')
 
     useEffect(() => {
         setScener(new Scener(canvasHolder.current));
@@ -128,7 +161,7 @@ export default function SceneBuilder(props) {
         geometry.scale(- 1, 1, 1);
 
         var material = new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load(texture)
+            map: new THREE.TextureLoader().load('http://192.168.4.42:8000/living.jpeg')
         });
 
         mesh = new THREE.Mesh(geometry, material);
