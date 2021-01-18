@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import styled from "styled-components"
@@ -41,7 +42,9 @@ align-content: center;
 align-items: center;
 `
 
-const MenuItem = styled.div`
+const MenuItem = styled(Link)`
+color: black;
+text-decoration: none;
 user-select: none;
 margin-right: 8px;
 margin-left: 8px;
@@ -83,12 +86,12 @@ const Header = () => {
   return (
     <HeaderContainer translusent={translusent}>
       <ItemsContainer>
-        <Logo src={LogoBase} />
+        <Link to="/"><Logo src={LogoBase} /></Link>
         <Menu>
           <OnlyDesktop><MenuItem>Product</MenuItem></OnlyDesktop>
           <OnlyDesktop><MenuItem>Solutions</MenuItem></OnlyDesktop>
           <OnlyDesktop><MenuItem>Princing</MenuItem></OnlyDesktop>
-          <OnlyDesktop><MenuItem>Sign In</MenuItem></OnlyDesktop>
+          <OnlyDesktop><MenuItem to="/signIn">Sign In</MenuItem></OnlyDesktop>
           <MenuAccentButton>Get Started</MenuAccentButton>
         </Menu>
       </ItemsContainer>

@@ -10,7 +10,7 @@ import Solutions from '../components/index/sections/solutions'
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO />
+      <SEO title="Home" />
       <Greetings/>
       <Product />
       <Solutions />

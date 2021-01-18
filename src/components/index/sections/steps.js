@@ -73,6 +73,7 @@ position: absolute;
 width: 40px;
 height: 40px;
 transition: .5s;
+cursor: pointer;
 `
 
 const SubSections = styled.div`
