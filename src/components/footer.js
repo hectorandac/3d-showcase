@@ -49,7 +49,7 @@ const ImageHolder = styled.div`
 display: flex;
 flex-direction: row;
 @media only screen and (max-width: 870px) {
-    margin-right: 70vw;
+    margin-right: 50vw;
 }
 `
 
