@@ -25,29 +25,38 @@ justify-content: space-around;
 justify-items: start;
 align-content: start;
 align-items: start;
-margin-bottom: 42px;
+margin-bottom: 48px;
+@media only screen and (max-width: 870px) {
+    flex-wrap: wrap;
+    justify-content: start;
+}
 `
 
 const FooterSection = styled.div`
 text-align: left;
 height: 100%;
-padding: 32px;
 display: flex;
 flex-direction: column;
 justify-content: start;
 justify-items: start;
 align-content: start;
 align-items: start;
+margin-top: 16px;
+margin-right: 16px;
 `
 
 const ImageHolder = styled.div`
 display: flex;
 flex-direction: row;
+@media only screen and (max-width: 870px) {
+    margin-right: 70vw;
+}
 `
 
 const Image = styled.img`
 height: 56px;
 margin-right: 8px;
+max-width: inherit;
 `
 
 const CustomLink = styled(Link)`
